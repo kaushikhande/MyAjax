@@ -23,7 +23,7 @@ __Task List__
 - [x] Ajax Read sample.txt added 
 - [x] First ajax request.
 - [x] Ajax 2 json file request
-- [ ] Ajax 3 request to extenal API
+- [x] Ajax 3 request to extenal API
 - [ ] Ajax 4 php request
 - [ ] Ajax 5 mysql request
 

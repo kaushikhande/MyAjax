@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GitHub API</title>
+	<style type="text/css">
+		body{
+			background-color: #f1f1f1;
+			color: #555;
+		    font-family: Arial, Helvetica, sans-serif;
+		    font-size: 16px;
+		    font-weight: normal;
+		}
+		.users{
+			display: flex;
+			background: #e3e3e3;
+			padding: 10px;
+			margin-bottom: 10px;
+
+		}
+		.users ul{
+			list-style: none;
+		}
+		.button{
+			background-color: #333;
+			color: #fff;
+			padding: 10px 15px; 
+			border: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>GitHub Users</h1>
+	<br>
+	<button class = "button" id = 'button1'>Get Users</button>
+	<br>
+	<br>
+	<div id= 'users'></div>
+<script type="text/javascript">
+	document.getElementById('button1').addEventListener('click', getUsers);
+
+	function getUsers(){
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'https://api.github.com/users', true);
+		console.log('In GetUsers');
+
+		xhr.onload = function(){
+			if(this.status == 200){
+				console.log('In Status 200');
+				var users = JSON.parse(this.responseText);
+				var output = "";
+				for(var i in users){
+					output += '<div class="users">' +
+								'<img src = "'+ users[i].avatar_url+'"' +
+								' width = "120" height= "120">' +
+								'<ul>' +
+								'<li> Login ID:' + users[i].id +'</li>'+
+								'<li> Login Name:' + users[i].login + '</li>' +
+								'</ul>' +
+								'</div>';
+
+				}
+				document.getElementById('users').innerHTML = output;
+			}
+
+		}
+		xhr.send();
+	}
+</script>
+</body>
+</html>
