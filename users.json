@@ -1,0 +1,21 @@
+[{
+	"id" : "CAND19939",
+	"name" : "Candidate2",
+	"age" : 25,
+	"email" : "cand19939@example.com"
+},
+{
+	"id" : "CAND19919",
+	"name" : "Candidate3",
+	"age" : 25,
+	"email" : "cand19919@example.com"
+	
+},
+{	
+	"id" : "CAND19933",
+	"name" : "Candidate1",
+	"age" : 25,
+	"email" : "cand19933@example.com"
+
+}
+]
