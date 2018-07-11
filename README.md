@@ -24,8 +24,11 @@ __Task List__
 - [x] First ajax request.
 - [x] Ajax 2 json file request
 - [x] Ajax 3 request to extenal API
+- [x] Css Added to ajax 3
 - [ ] Ajax 4 php request
 - [ ] Ajax 5 mysql request
 
 **Bold Text**
 *Italic Text*
+### SAMPLE OUTPUT 
+![ajax3_output](/images/ajax3_sample.png)
