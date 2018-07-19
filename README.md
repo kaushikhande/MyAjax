@@ -27,6 +27,9 @@ __Task List__
 - [x] Css Added to ajax 3
 - [ ] Ajax 4 php request
 - [ ] Ajax 5 mysql request
+- [x] GitHub Finder App Started
+- [ ] Github Finder App Complete
+- [ ] Github Integration in Ajax 3 file
 
 **Bold Text**
 *Italic Text*
