@@ -50,8 +50,16 @@
     <script type="text/javascript">
       document.getElementById('searchUser').addEventListener('keyup', getProfile);
       function getProfile(){
-        
-        console.log(document.getElementById('searchUser').value);
+        var userName = document.getElementById('searchUser').value;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','https://api.github.com/users/'+userName, true)
+        xhr.onload = function(){
+          if (this.status == 200) {
+            console.log('here:'+this.responseText);
+          }
+
+        }
+        xhr.send();
       }
     </script>
     
