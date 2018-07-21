@@ -9,7 +9,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://bootswatch.com/4/simplex/bootstrap.min.css" rel="stylesheet">
-
+    <!--<link href="https://bootswatch.com/3/simplex/bootstrap.min.css" rel="stylesheet">-->
     <!-- Custom styles for this template -->
     <link rel ="stylesheet" href="style.css">
     
@@ -45,7 +45,9 @@
       <br>
       <div id = "profile"></div>
 
+
     </main><!-- /.container -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       document.getElementById('searchUser').addEventListener('keyup', getProfile);
@@ -56,6 +58,23 @@
         xhr.onload = function(){
           if (this.status == 200) {
             console.log('here:'+this.responseText);
+            var user = JSON.parse(this.responseText);
+            
+            var profileOutput = '<div class="card mb-3">' +
+                                  
+                                    '<h3 class="card-header">' + user.name +'</h3>' +
+                                  
+                                  '<div class="card-body">' +
+                                    '<div class="row">' +
+                                      '<div class="col-md-3">' +
+                                        '<img class="thumbnail-avatar" src="'+ user.avatar_url+'">' +
+                                        '<br><br>' +
+                                        '<a target="_blank" href = "'+user.html_url+'" class ="btn ' + 'btn-primary btn-block">GET PROFILE</a>' +
+                                      '</div>' +
+                                    '</div>' +  
+                                  '</div>' +
+                                '</div>';
+            document.getElementById('profile').innerHTML = profileOutput;
           }
 
         }
