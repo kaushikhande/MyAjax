@@ -28,10 +28,18 @@ __Task List__
 - [ ] Ajax 4 php request
 - [ ] Ajax 5 mysql request
 - [x] GitHub Finder App Started
-- [ ] Github Finder App Complete
+- [x] Github Finder App Complete
 - [ ] Github Integration in Ajax 3 file
 
 **Bold Text**
 *Italic Text*
 ### SAMPLE OUTPUT 
+#### Github Users Request
 ![ajax3_output](/images/ajax3_sample.png)
+#### Github User Profile Finder
+__First Page__
+![githubfinderSearch](/images/github_finder_1.png)
+__After Search__
+![githubfinderAfterSearch](/images/github_finder_2.png)
+__After Search__
+![githubfinderAfterSearch](/images/github_finder_3.png)
