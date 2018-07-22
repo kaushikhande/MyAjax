@@ -1,3 +1,3 @@
 <?php
-include_once("gihubFinder.html");
+include_once("githubFinder.html");
 ?>
